@@ -2,7 +2,7 @@
 schema: requirements
 schema_version: 1
 spec_stage: requirements
-status: approval_pending
+status: approved
 owner_role: product
 subject: 'CLI-утилита: команда smoke --version печатает версию пакета'
 generated_at: '2026-11-11T00:00:00Z'
@@ -13,6 +13,8 @@ upstream_hashes:
   charter: "b36527805a4024a82d9f0e9d6590409c55af94e4"
 approved_content_hash: 0b37067c00076591521b821b98845eb6e3c65791
 version: 2
+approved_at: '2026-11-11T11:20:30Z'
+approved_by: betta-tester
 ---
 
 # Requirements — CLI-утилита `smoke`: команда `smoke --version`
