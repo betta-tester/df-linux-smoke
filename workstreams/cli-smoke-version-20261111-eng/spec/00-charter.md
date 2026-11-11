@@ -2,7 +2,7 @@
 schema: charter
 schema_version: 1
 spec_stage: charter
-status: approval_pending
+status: approved
 owner_role: product
 subject: 'CLI-утилита: команда smoke --version печатает версию пакета'
 generated_at: '2026-11-11T00:00:00Z'
@@ -15,6 +15,8 @@ upstream_hashes:
   discovery-customer: ed58bf48096db728b2a65e7aa00af4c1b261b7ff
 approved_content_hash: 70b625c6dc6189b6d71df19eb6d2225305719d74
 version: 2
+approved_at: '2026-11-11T09:15:26Z'
+approved_by: betta-tester
 ---
 
 # Charter — CLI-утилита `smoke`: команда `smoke --version`
