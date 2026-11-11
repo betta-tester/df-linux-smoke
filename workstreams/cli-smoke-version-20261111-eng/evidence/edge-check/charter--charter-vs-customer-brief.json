@@ -1,0 +1,85 @@
+{
+  "absence": [],
+  "attempt_id": "f018ef87d2324b1bb13d6ad9c150f7ea",
+  "bases": [
+    {
+      "path": "00-discovery/upstream.md",
+      "role": "customer-brief",
+      "sha256": "04aca0c8325af0521c074d26d9cd7eb4908aaa3eb99b87d883329dce195bc6cd",
+      "size": 2566
+    }
+  ],
+  "check_identity": "8ff5143c955261d694acc91c25ab51b30d02fd2c1852a1d678c1201087900aab",
+  "context": {
+    "estimate_tokens": 4559,
+    "limit_tokens": 120000,
+    "method": "utf8-bytes/4",
+    "reserve_tokens": 8000,
+    "size": 18239,
+    "unit": "utf8-bytes"
+  },
+  "criteria": [
+    {
+      "id": "R1",
+      "reason": "Единственные цель G-01 и ограничение CON-01 customer-брифа перенесены в charter (G-01 и CON-01) без потери содержания.",
+      "status": "pass"
+    },
+    {
+      "id": "R2",
+      "reason": "В Goals хартии только G-01, присутствующая в брифе; прочие добавления — ограничения, риски и вопросы, не новые цели.",
+      "status": "pass"
+    },
+    {
+      "id": "R3",
+      "reason": "M-01 хартии (0%→100% за 3 месяца, traces G-01) и таргет NFR-01 совпадают с показателями брифа, новых метрик нет.",
+      "status": "pass"
+    }
+  ],
+  "edge": "charter-vs-customer-brief",
+  "findings": [],
+  "finished_at": "2026-11-11T09:12:48.431350+00:00",
+  "node": "charter",
+  "result_key": "0d4a83544f32db1cfd9bee0228508926c104957b17cf2f955decc025d808a191",
+  "reviewer": {
+    "effort": null,
+    "env_passthrough": [
+      "HOME",
+      "LANG",
+      "PATH",
+      "USER"
+    ],
+    "harness": "claude",
+    "harness_version": "2.1.322 (Claude Code)",
+    "model": "claude-opus-5",
+    "model_id": null
+  },
+  "rules": {
+    "id": "charter-vs-customer-brief",
+    "items": [
+      [
+        "R1",
+        "Каждая цель и ограничение брифа заказчика отражены в charter или явно отклонены с причиной."
+      ],
+      [
+        "R2",
+        "Charter не вводит целей, отсутствующих в брифе."
+      ],
+      [
+        "R3",
+        "Метрики charter выводимы из брифа."
+      ]
+    ]
+  },
+  "schema_version": 1,
+  "started_at": "2026-11-11T09:12:03.846747+00:00",
+  "subject": [
+    {
+      "path": "00-charter.md",
+      "role": "subject",
+      "sha256": "a34b51024fd92afef3b8a48f652dd6663438a0dd1c148ab3f06881dd353c17ac",
+      "size": 12532
+    }
+  ],
+  "verdict": "PASS",
+  "wave": 1
+}
