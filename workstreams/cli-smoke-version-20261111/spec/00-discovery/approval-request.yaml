@@ -1,0 +1,11 @@
+schema: discovery-brief-approval-request/v1
+purpose: discovery-brief-approval
+brief: brief.md
+brief_self_hash: "sha256:b8c47591755051c6d370a53cb5d552eb7ca7f2b0251e2791e45d8d2f22034c80"
+policy:
+  repo: "darkfactory-config"
+  ref: "test"
+  path: "accounts.human"
+  sha: "cfa2fca574604d1c18361c0d5816a6546f306904"
+run_id: "cli-smoke-version-20261111-09de97"
+ws_id: "cli-smoke-version-20261111"
