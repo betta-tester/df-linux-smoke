@@ -1,8 +1,6 @@
 ---
-schema: charter
-schema_version: 1
 spec_stage: charter
-status: approved
+status: approval_pending
 owner_role: product
 subject: 'CLI-утилита: команда smoke --version печатает версию пакета'
 generated_at: '2026-11-11T00:00:00Z'
@@ -13,10 +11,8 @@ traces_to:
 upstream_hashes:
   discovery-brief: 6e9b66622c4844b8c4dc6bf08862ac28b357e375
   discovery-customer: ed58bf48096db728b2a65e7aa00af4c1b261b7ff
-approved_content_hash: 70b625c6dc6189b6d71df19eb6d2225305719d74
-version: 2
-approved_at: '2026-11-11T09:15:26Z'
-approved_by: betta-tester
+approved_content_hash: 8884f248925d47693f8919920389c46aeabb3e9b
+version: 3
 ---
 
 # Charter — CLI-утилита `smoke`: команда `smoke --version`
@@ -133,11 +129,9 @@ FR-01 реализуем полностью, объём — один модул�
 #### M-01: Доля баг-репортов с точной версией
 
 Доля баг-репортов, содержащих точную версию, полученную из `smoke --version`:
-с 0% до 100% за 3 месяца с момента поставки.
+с 0% до 100% за 3 месяца.
 
 - **Traces**: G-01 (источник: `00-discovery/upstream.md`)
-- **Измерение**: ручная разметка входящих баг-репортов владельцем репозитория;
-  базовая линия 0% зафиксирована на 2026-11-11.
 
 ## Out of Scope
 
