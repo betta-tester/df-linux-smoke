@@ -1,6 +1,6 @@
 {
   "absence": [],
-  "attempt_id": "89b50eb9f4514b3a8d76047e7bebec86",
+  "attempt_id": "f2cbbb4611b64686bda0e0e6810e446f",
   "bases": [
     {
       "path": "00-discovery/brief.md",
@@ -11,30 +11,30 @@
   ],
   "check_identity": "76c4040d2972158e01b6a954cc1526c0cb97f139c572acba7f9efbbfac341efa",
   "context": {
-    "estimate_tokens": 4301,
+    "estimate_tokens": 4230,
     "limit_tokens": 120000,
     "method": "utf8-bytes/4",
     "reserve_tokens": 8000,
-    "size": 17206,
+    "size": 16920,
     "unit": "utf8-bytes"
   },
   "criteria": [
     {
       "id": "R1",
-      "reason": "Все уточнения брифа (CON-01, S-01, IF-01, AP-01 с feasibility, RK-01) имеют адрес в charter: CON-01/CON-02, «Предмет», FR-01 «Интерфейс», CON-03, RK-01.",
+      "reason": "Все уточнения брифа (CON-01, S-01, IF-01, AP-01, RK-01) отражены в charter — в CON-01/CON-02/CON-03, блоке «Интерфейс» FR-01, «Предмете» и RK-01.",
       "status": "pass"
     },
     {
       "id": "R2",
-      "reason": "Ни одно положение charter не расходится с брифом: ограничения рантайма, стек, контракт argv→stdout и способ тестирования через subprocess совпадают, добавленные пункты помечены как производные.",
+      "reason": "Ни один пункт charter не расходится с брифом: платформа, интерфейс, argparse/importlib.metadata, subprocess-тесты, feasibility и митигация RK-01 совпадают, добавленное помечено как внешнее к брифу.",
       "status": "pass"
     }
   ],
   "edge": "charter-vs-engineer-brief",
   "findings": [],
-  "finished_at": "2026-11-11T09:13:18.086633+00:00",
+  "finished_at": "2026-11-11T11:57:41.265636+00:00",
   "node": "charter",
-  "result_key": "9c2c222e402321ffc7b12d827fd1614d19d19db3493179b85d09fdfd5e84793d",
+  "result_key": "23f0cbc548ee43e60de18aa7914b81faf565cacfa6f08d459a35679f49b6b98e",
   "reviewer": {
     "effort": null,
     "env_passthrough": [
@@ -62,13 +62,13 @@
     ]
   },
   "schema_version": 1,
-  "started_at": "2026-11-11T09:12:48.431812+00:00",
+  "started_at": "2026-11-11T11:57:09.576509+00:00",
   "subject": [
     {
       "path": "00-charter.md",
       "role": "subject",
-      "sha256": "a34b51024fd92afef3b8a48f652dd6663438a0dd1c148ab3f06881dd353c17ac",
-      "size": 12532
+      "sha256": "9b8ca7389dda608c09fb7140e5fc75704004780e92936a162ff67bdd8e602e74",
+      "size": 12246
     }
   ],
   "verdict": "PASS",

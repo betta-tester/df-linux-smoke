@@ -2,7 +2,7 @@
 schema: behaviour-spec
 schema_version: 1
 spec_stage: behaviour-spec
-status: approved
+status: stale
 owner_role: product
 subject: 'CLI-утилита: команда smoke --version печатает версию пакета'
 generated_at: '2026-11-11T00:00:00Z'

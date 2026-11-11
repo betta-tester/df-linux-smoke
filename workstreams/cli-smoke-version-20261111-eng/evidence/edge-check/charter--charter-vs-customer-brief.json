@@ -1,6 +1,6 @@
 {
   "absence": [],
-  "attempt_id": "f018ef87d2324b1bb13d6ad9c150f7ea",
+  "attempt_id": "551f95ab72d24079ba5e5095e73376ef",
   "bases": [
     {
       "path": "00-discovery/upstream.md",
@@ -11,35 +11,35 @@
   ],
   "check_identity": "8ff5143c955261d694acc91c25ab51b30d02fd2c1852a1d678c1201087900aab",
   "context": {
-    "estimate_tokens": 4559,
+    "estimate_tokens": 4488,
     "limit_tokens": 120000,
     "method": "utf8-bytes/4",
     "reserve_tokens": 8000,
-    "size": 18239,
+    "size": 17953,
     "unit": "utf8-bytes"
   },
   "criteria": [
     {
       "id": "R1",
-      "reason": "Единственные цель G-01 и ограничение CON-01 customer-брифа перенесены в charter (G-01 и CON-01) без потери содержания.",
+      "reason": "Все цели и ограничения customer-брифа (G-01, CON-01, а также P/J/FR/NFR/M/OUT) отражены в charter без отклонений.",
       "status": "pass"
     },
     {
       "id": "R2",
-      "reason": "В Goals хартии только G-01, присутствующая в брифе; прочие добавления — ограничения, риски и вопросы, не новые цели.",
+      "reason": "Единственная цель charter — G-01 — присутствует в брифе; прочие добавления относятся к ограничениям, рискам и вопросам, а не к целям.",
       "status": "pass"
     },
     {
       "id": "R3",
-      "reason": "M-01 хартии (0%→100% за 3 месяца, traces G-01) и таргет NFR-01 совпадают с показателями брифа, новых метрик нет.",
+      "reason": "M-01 charter дословно совпадает с M-01 брифа, численные таргеты NFR-01 также взяты из брифа.",
       "status": "pass"
     }
   ],
   "edge": "charter-vs-customer-brief",
   "findings": [],
-  "finished_at": "2026-11-11T09:12:48.431350+00:00",
+  "finished_at": "2026-11-11T11:57:09.575877+00:00",
   "node": "charter",
-  "result_key": "0d4a83544f32db1cfd9bee0228508926c104957b17cf2f955decc025d808a191",
+  "result_key": "16b11c8c8d1422dcec518d51d30487d498533bf95712b1595fa698e9638ee28c",
   "reviewer": {
     "effort": null,
     "env_passthrough": [
@@ -71,13 +71,13 @@
     ]
   },
   "schema_version": 1,
-  "started_at": "2026-11-11T09:12:03.846747+00:00",
+  "started_at": "2026-11-11T11:56:29.489612+00:00",
   "subject": [
     {
       "path": "00-charter.md",
       "role": "subject",
-      "sha256": "a34b51024fd92afef3b8a48f652dd6663438a0dd1c148ab3f06881dd353c17ac",
-      "size": 12532
+      "sha256": "9b8ca7389dda608c09fb7140e5fc75704004780e92936a162ff67bdd8e602e74",
+      "size": 12246
     }
   ],
   "verdict": "PASS",
