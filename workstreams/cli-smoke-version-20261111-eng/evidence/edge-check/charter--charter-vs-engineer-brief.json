@@ -1,0 +1,76 @@
+{
+  "absence": [],
+  "attempt_id": "89b50eb9f4514b3a8d76047e7bebec86",
+  "bases": [
+    {
+      "path": "00-discovery/brief.md",
+      "role": "engineer-brief",
+      "sha256": "b87ecafddd1bca86ee0a4ff6f9c2ac7d5e090a6516918587628c2915892aba1e",
+      "size": 1624
+    }
+  ],
+  "check_identity": "76c4040d2972158e01b6a954cc1526c0cb97f139c572acba7f9efbbfac341efa",
+  "context": {
+    "estimate_tokens": 4301,
+    "limit_tokens": 120000,
+    "method": "utf8-bytes/4",
+    "reserve_tokens": 8000,
+    "size": 17206,
+    "unit": "utf8-bytes"
+  },
+  "criteria": [
+    {
+      "id": "R1",
+      "reason": "Все уточнения брифа (CON-01, S-01, IF-01, AP-01 с feasibility, RK-01) имеют адрес в charter: CON-01/CON-02, «Предмет», FR-01 «Интерфейс», CON-03, RK-01.",
+      "status": "pass"
+    },
+    {
+      "id": "R2",
+      "reason": "Ни одно положение charter не расходится с брифом: ограничения рантайма, стек, контракт argv→stdout и способ тестирования через subprocess совпадают, добавленные пункты помечены как производные.",
+      "status": "pass"
+    }
+  ],
+  "edge": "charter-vs-engineer-brief",
+  "findings": [],
+  "finished_at": "2026-11-11T09:13:18.086633+00:00",
+  "node": "charter",
+  "result_key": "9c2c222e402321ffc7b12d827fd1614d19d19db3493179b85d09fdfd5e84793d",
+  "reviewer": {
+    "effort": null,
+    "env_passthrough": [
+      "HOME",
+      "LANG",
+      "PATH",
+      "USER"
+    ],
+    "harness": "claude",
+    "harness_version": "2.1.322 (Claude Code)",
+    "model": "claude-opus-5",
+    "model_id": null
+  },
+  "rules": {
+    "id": "charter-vs-engineer-brief",
+    "items": [
+      [
+        "R1",
+        "Уточнения инженерного брифа (ограничения реализации, границы) отражены в charter."
+      ],
+      [
+        "R2",
+        "Charter не противоречит инженерному брифу."
+      ]
+    ]
+  },
+  "schema_version": 1,
+  "started_at": "2026-11-11T09:12:48.431812+00:00",
+  "subject": [
+    {
+      "path": "00-charter.md",
+      "role": "subject",
+      "sha256": "a34b51024fd92afef3b8a48f652dd6663438a0dd1c148ab3f06881dd353c17ac",
+      "size": 12532
+    }
+  ],
+  "verdict": "PASS",
+  "wave": 1
+}
