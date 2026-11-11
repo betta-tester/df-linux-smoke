@@ -1,0 +1,94 @@
+{
+  "absence": [],
+  "attempt_id": "569e4436c8d148c0b14ffa631b505715",
+  "bases": [
+    {
+      "path": "00-charter.md",
+      "role": "charter",
+      "sha256": "485d4515cfb218c0b31eae16b4626a67fde8c5fc3e78af6e64ef0bf58999602d",
+      "size": 12672
+    }
+  ],
+  "check_identity": "d65ac9507ea75d3e5e9115a10e1ba16ad4e193643d05fd849732401adb432615",
+  "context": {
+    "estimate_tokens": 7949,
+    "limit_tokens": 120000,
+    "method": "utf8-bytes/4",
+    "reserve_tokens": 8000,
+    "size": 31796,
+    "unit": "utf8-bytes"
+  },
+  "criteria": [
+    {
+      "id": "R1",
+      "reason": "Все элементы хартии (G-01, CON-01, CON-02, CON-03, M-01) имеют покрывающие требования: G-01 → FR-01/FR-04/NFR-02, CON-01 → FR-02/FR-04/NFR-03, CON-02 → NFR-01, CON-03 → NFR-03 и acceptance FR-01, M-01 → NFR-02 с A-03.",
+      "status": "pass"
+    },
+    {
+      "id": "R2",
+      "reason": "Ни одно из шести Must-требований не противоречит CON-01…CON-03; упоминание объёма «один модуль и один тест» в CON-03 — feasibility-оценка, а не ограничение, которое нарушает FR-04.",
+      "status": "pass"
+    },
+    {
+      "id": "R3",
+      "reason": "Каждое выведенное требование названо со ссылкой на элемент хартии (IF-01/«Интерфейс» FR-01, Q-01, OUT-01, RK-01, RK-02, J-01, P-02, CON-01…CON-03), новых целей без ссылки нет.",
+      "status": "pass"
+    },
+    {
+      "id": "R4",
+      "reason": "У всех Must/Should заданы внешне наблюдаемые acceptance/target (stdout, код возврата, побайтовое совпадение при перенаправлении, 0 сетевых вызовов), а ссылка на `[project.scripts]` в FR-02 — перенос решения хартии при внешней проверке.",
+      "status": "pass"
+    }
+  ],
+  "edge": "requirements-vs-charter",
+  "findings": [],
+  "finished_at": "2026-11-11T11:18:29.525915+00:00",
+  "node": "requirements",
+  "result_key": "b2ec6e38d97f33778cfa010dee787de8e36dd481e1b487a84004f45a4f8b7abd",
+  "reviewer": {
+    "effort": null,
+    "env_passthrough": [
+      "HOME",
+      "LANG",
+      "PATH",
+      "USER"
+    ],
+    "harness": "claude",
+    "harness_version": "2.1.322 (Claude Code)",
+    "model": "claude-opus-5",
+    "model_id": null
+  },
+  "rules": {
+    "id": "requirements-vs-charter",
+    "items": [
+      [
+        "R1",
+        "Каждая цель, ограничение и метрика charter (G-*, CON-*, M-*) имеет хотя бы одно требование, которое её реализует или явно отклоняет с названной причиной."
+      ],
+      [
+        "R2",
+        "Ни одно Must-требование не противоречит ограничениям charter."
+      ],
+      [
+        "R3",
+        "Требование не вводит цель, которой нет в charter, без ссылки на него."
+      ],
+      [
+        "R4",
+        "Формулировка каждого Must/Should проверяема снаружи: наблюдаемый результат, не внутреннее устройство."
+      ]
+    ]
+  },
+  "schema_version": 1,
+  "started_at": "2026-11-11T11:16:33.996994+00:00",
+  "subject": [
+    {
+      "path": "10-requirements.md",
+      "role": "subject",
+      "sha256": "adf1d924450c20f3c21b88c9626a4145dbf0f7c730fadb95cf37f3572239003e",
+      "size": 15627
+    }
+  ],
+  "verdict": "PASS",
+  "wave": 2
+}
