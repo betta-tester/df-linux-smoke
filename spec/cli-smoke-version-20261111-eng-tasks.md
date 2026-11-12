@@ -183,7 +183,7 @@ Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-0
 **Traces to:** [FR-04], [FR-01]
 
 ### TASK-003: Ручная проверка видимости bump версии
-P2 | 🔄 IN_PROGRESS   Est: 0.5d
+P2 | ✅ DONE   Est: 0.5d
 
 Реализовать сценарии BEH-09 (DT-03, группа edges).
 Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-03
@@ -191,9 +191,9 @@ Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-0
 **Depends on:** [TASK-001]
 
 **Checklist:**
-- [ ] реализовать BEH-09: Смена версии в `pyproject.toml` видна в выводе без иных правок (DEL-17 (document): Заполненный чек-лист показывает `smoke <версия-A>` до правки, `smoke <версия-B>` после `uv sync`, совпадение `версия-B` со вписанным в `pyproject.toml` значением и список изменённых файлов, в котором нет кода, проверок и документации)
-- [ ] DEL-16 (document): Исполнитель проходит проверку bump по одному `tests/manual/version-bump-checklist.md`, не обращаясь к спецификации, и на выходе имеет заполненные поля: вывод до правки, diff `pyproject.toml`, вывод после `uv sync`, список изменённых файлов и подпись
-- [ ] проверка группы: tests/manual/version-bump-checklist.md (kind: manual) зелёные на BEH-09
+- [x] реализовать BEH-09: Смена версии в `pyproject.toml` видна в выводе без иных правок (DEL-17 (document): Заполненный чек-лист показывает `smoke <версия-A>` до правки, `smoke <версия-B>` после `uv sync`, совпадение `версия-B` со вписанным в `pyproject.toml` значением и список изменённых файлов, в котором нет кода, проверок и документации)
+- [x] DEL-16 (document): Исполнитель проходит проверку bump по одному `tests/manual/version-bump-checklist.md`, не обращаясь к спецификации, и на выходе имеет заполненные поля: вывод до правки, diff `pyproject.toml`, вывод после `uv sync`, список изменённых файлов и подпись
+- [x] проверка группы: tests/manual/version-bump-checklist.md (kind: manual) зелёные на BEH-09
 
 **Traces to:** [NFR-03], [FR-04]
 
