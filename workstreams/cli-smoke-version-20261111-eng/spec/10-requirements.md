@@ -2,7 +2,7 @@
 schema: requirements
 schema_version: 1
 spec_stage: requirements
-status: stale
+status: approval_pending
 owner_role: product
 subject: 'CLI-утилита: команда smoke --version печатает версию пакета'
 generated_at: '2026-11-11T00:00:00Z'
@@ -10,9 +10,9 @@ requirements_source: 00-discovery/upstream.md
 traces_to:
 - charter
 upstream_hashes:
-  charter: "b36527805a4024a82d9f0e9d6590409c55af94e4"
+  charter: 816dfb5bdfee7a63a7d454a0d9b06e50504ae938
 approved_content_hash: 0b37067c00076591521b821b98845eb6e3c65791
-version: 2
+version: 3
 approved_at: '2026-11-11T11:20:30Z'
 approved_by: betta-tester
 ---
