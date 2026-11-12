@@ -1,0 +1,19 @@
+[project]
+name = "smoke"
+version = "0.1.0"
+description = "CLI smoke utility"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+smoke = "smoke.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+]

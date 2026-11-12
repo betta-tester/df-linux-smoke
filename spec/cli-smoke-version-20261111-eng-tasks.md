@@ -143,7 +143,7 @@ behaviour-spec: `tests/test_cli.py` — `BEH-01`…`BEH-06` и `BEH-08`;
 - **AC-08** (manual): Bump версии виден в выводе без других правок
 
 ### TASK-001: Команда `smoke --version` и контракт её вывода
-P2 | TODO   Est: 0.5d
+P2 | 🔄 IN_PROGRESS   Est: 0.5d
 
 Реализовать сценарии BEH-01, BEH-02, BEH-03, BEH-04, BEH-05, BEH-06, BEH-08 (DT-01, группа core).
 Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-01
