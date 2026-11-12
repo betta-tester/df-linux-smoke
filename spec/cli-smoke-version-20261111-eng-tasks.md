@@ -1,15 +1,67 @@
 ---
-spec_stage: tasks
-status: draft
-owner_role: stream-owner
-version: 1
-generated_by: fleet-agent
-generated_at: "2026-11-12T10:06:40+04:00"
-source_prompt_version: ""
-validation: ""
-approved_by: ""
 traces_to:
 - decomposition
+- AC-01
+- AC-02
+- AC-03
+- AC-04
+- AC-05
+- AC-06
+- AC-07
+- AC-08
+- BEH-01
+- BEH-02
+- BEH-03
+- BEH-04
+- BEH-05
+- BEH-06
+- BEH-07
+- BEH-08
+- BEH-09
+- CON-03
+- DEL-01
+- DEL-02
+- DEL-03
+- DEL-04
+- DEL-05
+- DEL-06
+- DEL-07
+- DEL-08
+- DEL-09
+- DEL-10
+- DEL-11
+- DEL-12
+- DEL-13
+- DEL-14
+- DEL-15
+- DEL-16
+- DEL-17
+- DT-01
+- DT-02
+- DT-03
+- FR-01
+- FR-02
+- FR-03
+- FR-04
+- NFR-01
+- NFR-02
+- NFR-03
+- OUT-01
+- Q-01
+- Q-02
+- Q-03
+upstream_hashes:
+  decomposition: 363c0e4fa905ce4b58b412ba505699d7ed10792f
+spec_stage: tasks
+status: approved
+version: 2
+generated_by: fleet-agent
+generated_at: '2026-11-12T10:06:40+04:00'
+source_prompt_version: ''
+validation: pass
+approved_by: andrei-shtanakov
+approved_at: '2026-11-12T06:08:31Z'
+owner_role: stream-owner
 ---
 
 ## Milestone 1: CLI-утилита: команда smoke --version печатает версию пакета
