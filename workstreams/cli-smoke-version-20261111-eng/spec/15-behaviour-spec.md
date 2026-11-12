@@ -2,7 +2,7 @@
 schema: behaviour-spec
 schema_version: 1
 spec_stage: behaviour-spec
-status: stale
+status: approval_pending
 owner_role: product
 subject: 'CLI-утилита: команда smoke --version печатает версию пакета'
 generated_at: '2026-11-11T00:00:00Z'
@@ -10,8 +10,8 @@ requirements_source: 10-requirements.md
 traces_to:
 - requirements
 upstream_hashes:
-  requirements: "4031d9c24b7c431952eb7ccf45f93435181ca540"
-version: 2
+  requirements: c336d43fb4c51db46eea28c0fe0e294448b91c8e
+version: 3
 approved_content_hash: 19c0b4a902b6db4d2042219f4ef87ca101347cdc
 approved_at: '2026-11-11T11:39:21Z'
 approved_by: betta-tester
