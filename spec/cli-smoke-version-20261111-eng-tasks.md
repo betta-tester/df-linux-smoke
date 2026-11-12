@@ -143,31 +143,31 @@ behaviour-spec: `tests/test_cli.py` — `BEH-01`…`BEH-06` и `BEH-08`;
 - **AC-08** (manual): Bump версии виден в выводе без других правок
 
 ### TASK-001: Команда `smoke --version` и контракт её вывода
-P2 | TODO   Est: 0.5d
+P2 | ✅ DONE   Est: 0.5d
 
 Реализовать сценарии BEH-01, BEH-02, BEH-03, BEH-04, BEH-05, BEH-06, BEH-08 (DT-01, группа core).
 Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-01
 **Delivers:** DEL-01, DEL-02, DEL-03, DEL-04, DEL-05, DEL-06, DEL-07, DEL-08, DEL-09, DEL-10, DEL-11, DEL-12
 
 **Checklist:**
-- [ ] реализовать BEH-01: `smoke --version` печатает одну строку версии и выходит с кодом 0 (DEL-02 (capability): Вызов `smoke --version` оставляет на stdout ровно одну строку `smoke <версия>`, завершённую переводом строки, и процесс выходит с кодом возврата 0)
-- [ ] реализовать BEH-02: Напечатанная версия совпадает с метаданными установленного дистрибутива (DEL-03 (capability): Вторая часть выведенной строки посимвольно равна значению, которое `importlib.metadata.version` возвращает для дистрибутива `smoke` в окружении прогона и которое вычислено в момент прогона, а не литералу в коде проверки)
-- [ ] реализовать BEH-03: Команда доступна по имени, без пути к модулю (DEL-01 (config): Окружение, созданное через `uv sync`, разрешает команду по имени `smoke` из каталога вне репозитория — без `python -m`, без пути к файлу в `src/` и без cwd репозитория — и команда отрабатывает по BEH-01)
-- [ ] реализовать BEH-04: На stdout нет ничего, кроме строки версии (DEL-04 (capability): Полный байтовый буфер stdout содержит ровно одну непустую строку — без рамок, баннеров, приглашений к действию, ANSI-последовательностей и управляющих символов кроме финального перевода строки, без пустых строк до и после)
-- [ ] реализовать BEH-05: Вывод не зависит от того, терминал ли stdout (DEL-05 (capability): Буфер stdout вызова со stdout на слейв-дескрипторе pty и буфер вызова со stdout в пайп равны побайтово, и повторный запуск даёт тот же буфер)
-- [ ] реализовать BEH-06: Запуск без аргументов не выглядит ответом на `--version` (DEL-06 (capability): Вызов без аргументов печатает usage на stderr, не печатает на stdout строку вида `smoke <версия>` и выходит с кодом возврата 2)
-- [ ] реализовать BEH-08: Ответ укладывается в секунду, без сети и записи на диск (DEL-07 (capability): Полное wall-clock время процесса меньше 1 с, за время вызова не создаётся и не изменяется ни один файл в рабочем каталоге и во временном `HOME`, тот же вызов под заглушкой сокета печатает версию и выходит с кодом 0, и все три измеренные величины попадают в отчёт прогона как числа)
-- [ ] DEL-08 (module): Порог времени из NFR-01 живёт в проверках ровно в одной именованной константе `MAX_RESPONSE_SECONDS`, и поиск по значению порога не находит его больше ни в одном файле проверок
-- [ ] DEL-09 (document): Читающий `README.md` получает последовательность `uv sync` → `uv run smoke --version` как единственный поддерживаемый способ запуска и не находит в нём значения версии
-- [ ] DEL-10 (module): В `src/smoke/cli.py` обращение к метаданным происходит внутри `main()` в момент вызова — не на импорте модуля и не при конструировании парсера через `action=version` — и в модуле нет ни обращения к `isatty`, ни ветвления по каналу вывода
-- [ ] DEL-11 (config): Значение версии встречается ровно в одном файле репозитория — `pyproject.toml`; поиск по значению не находит его ни в продуктовом коде, ни в проверках, ни в документации
-- [ ] DEL-12 (module): Первый red-прогон падает на несовпадении stdout, кода возврата или времени, а не на `ImportError`/`FileNotFoundError`: `pyproject.toml` с `[project.scripts]` и пакет-маркер входят в тот же red-коммит, и вывод прогона это показывает
-- [ ] проверка группы: tests/test_cli.py::test_version_prints_single_version_line (kind: atp), tests/test_cli.py::test_version_matches_installed_metadata (kind: atp), tests/test_cli.py::test_console_script_is_installed (kind: integration), tests/test_cli.py::test_version_stdout_is_plain_single_line (kind: atp), tests/test_cli.py::test_version_output_identical_tty_and_pipe (kind: contract), tests/test_cli.py::test_no_args_does_not_print_version (kind: atp), tests/test_cli.py::test_version_responds_under_one_second_without_side_effects (kind: integration) зелёные на BEH-01, BEH-02, BEH-03, BEH-04, BEH-05, BEH-06, BEH-08
+- [x] реализовать BEH-01: `smoke --version` печатает одну строку версии и выходит с кодом 0 (DEL-02 (capability): Вызов `smoke --version` оставляет на stdout ровно одну строку `smoke <версия>`, завершённую переводом строки, и процесс выходит с кодом возврата 0)
+- [x] реализовать BEH-02: Напечатанная версия совпадает с метаданными установленного дистрибутива (DEL-03 (capability): Вторая часть выведенной строки посимвольно равна значению, которое `importlib.metadata.version` возвращает для дистрибутива `smoke` в окружении прогона и которое вычислено в момент прогона, а не литералу в коде проверки)
+- [x] реализовать BEH-03: Команда доступна по имени, без пути к модулю (DEL-01 (config): Окружение, созданное через `uv sync`, разрешает команду по имени `smoke` из каталога вне репозитория — без `python -m`, без пути к файлу в `src/` и без cwd репозитория — и команда отрабатывает по BEH-01)
+- [x] реализовать BEH-04: На stdout нет ничего, кроме строки версии (DEL-04 (capability): Полный байтовый буфер stdout содержит ровно одну непустую строку — без рамок, баннеров, приглашений к действию, ANSI-последовательностей и управляющих символов кроме финального перевода строки, без пустых строк до и после)
+- [x] реализовать BEH-05: Вывод не зависит от того, терминал ли stdout (DEL-05 (capability): Буфер stdout вызова со stdout на слейв-дескрипторе pty и буфер вызова со stdout в пайп равны побайтово, и повторный запуск даёт тот же буфер)
+- [x] реализовать BEH-06: Запуск без аргументов не выглядит ответом на `--version` (DEL-06 (capability): Вызов без аргументов печатает usage на stderr, не печатает на stdout строку вида `smoke <версия>` и выходит с кодом возврата 2)
+- [x] реализовать BEH-08: Ответ укладывается в секунду, без сети и записи на диск (DEL-07 (capability): Полное wall-clock время процесса меньше 1 с, за время вызова не создаётся и не изменяется ни один файл в рабочем каталоге и во временном `HOME`, тот же вызов под заглушкой сокета печатает версию и выходит с кодом 0, и все три измеренные величины попадают в отчёт прогона как числа)
+- [x] DEL-08 (module): Порог времени из NFR-01 живёт в проверках ровно в одной именованной константе `MAX_RESPONSE_SECONDS`, и поиск по значению порога не находит его больше ни в одном файле проверок
+- [x] DEL-09 (document): Читающий `README.md` получает последовательность `uv sync` → `uv run smoke --version` как единственный поддерживаемый способ запуска и не находит в нём значения версии
+- [x] DEL-10 (module): В `src/smoke/cli.py` обращение к метаданным происходит внутри `main()` в момент вызова — не на импорте модуля и не при конструировании парсера через `action=version` — и в модуле нет ни обращения к `isatty`, ни ветвления по каналу вывода
+- [x] DEL-11 (config): Значение версии встречается ровно в одном файле репозитория — `pyproject.toml`; поиск по значению не находит его ни в продуктовом коде, ни в проверках, ни в документации
+- [x] DEL-12 (module): Первый red-прогон падает на несовпадении stdout, кода возврата или времени, а не на `ImportError`/`FileNotFoundError`: `pyproject.toml` с `[project.scripts]` и пакет-маркер входят в тот же red-коммит, и вывод прогона это показывает
+- [x] проверка группы: tests/test_cli.py::test_version_prints_single_version_line (kind: atp), tests/test_cli.py::test_version_matches_installed_metadata (kind: atp), tests/test_cli.py::test_console_script_is_installed (kind: integration), tests/test_cli.py::test_version_stdout_is_plain_single_line (kind: atp), tests/test_cli.py::test_version_output_identical_tty_and_pipe (kind: contract), tests/test_cli.py::test_no_args_does_not_print_version (kind: atp), tests/test_cli.py::test_version_responds_under_one_second_without_side_effects (kind: integration) зелёные на BEH-01, BEH-02, BEH-03, BEH-04, BEH-05, BEH-06, BEH-08
 
 **Traces to:** [FR-01], [FR-02], [FR-04], [NFR-03], [NFR-02], [FR-03], [NFR-01]
 
 ### TASK-002: Отказ в окружении без установленного дистрибутива
-P2 | TODO   Est: 0.5d
+P2 | ✅ DONE   Est: 0.5d
 
 Реализовать сценарии BEH-07 (DT-02, группа edges).
 Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-02
@@ -175,15 +175,15 @@ Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-0
 **Depends on:** [TASK-001]
 
 **Checklist:**
-- [ ] реализовать BEH-07: Без установленного дистрибутива версия не печатается и код ненулевой (DEL-13 (capability): В окружении без установленного дистрибутива `smoke` ветка `--version` не печатает на stdout никакого значения версии — ни литерала из кода, ни значения из рабочей копии — и процесс выходит с ненулевым кодом возврата 1)
-- [ ] DEL-14 (capability): На stderr в этом окружении появляется одна читаемая строка о том, что дистрибутив `smoke` не установлен и что окружение создаётся через `uv sync`, и в stderr нет признака traceback
-- [ ] DEL-15 (module): Проверка наблюдает отказ в интерпретаторе, поднятом через `uv run --no-project --isolated python` с `src/` в `PYTHONPATH` и cwd во временном каталоге, без подмены `importlib.metadata`, и команда запуска видна в эвиденции прогона
-- [ ] проверка группы: tests/test_cli_missing_distribution.py::test_missing_distribution_prints_no_version (kind: integration) зелёные на BEH-07
+- [x] реализовать BEH-07: Без установленного дистрибутива версия не печатается и код ненулевой (DEL-13 (capability): В окружении без установленного дистрибутива `smoke` ветка `--version` не печатает на stdout никакого значения версии — ни литерала из кода, ни значения из рабочей копии — и процесс выходит с ненулевым кодом возврата 1)
+- [x] DEL-14 (capability): На stderr в этом окружении появляется одна читаемая строка о том, что дистрибутив `smoke` не установлен и что окружение создаётся через `uv sync`, и в stderr нет признака traceback
+- [x] DEL-15 (module): Проверка наблюдает отказ в интерпретаторе, поднятом через `uv run --no-project --isolated python` с `src/` в `PYTHONPATH` и cwd во временном каталоге, без подмены `importlib.metadata`, и команда запуска видна в эвиденции прогона
+- [x] проверка группы: tests/test_cli_missing_distribution.py::test_missing_distribution_prints_no_version (kind: integration) зелёные на BEH-07
 
 **Traces to:** [FR-04], [FR-01]
 
 ### TASK-003: Ручная проверка видимости bump версии
-P2 | TODO   Est: 0.5d
+P2 | ✅ DONE   Est: 0.5d
 
 Реализовать сценарии BEH-09 (DT-03, группа edges).
 Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-03
@@ -191,9 +191,9 @@ Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-0
 **Depends on:** [TASK-001]
 
 **Checklist:**
-- [ ] реализовать BEH-09: Смена версии в `pyproject.toml` видна в выводе без иных правок (DEL-17 (document): Заполненный чек-лист показывает `smoke <версия-A>` до правки, `smoke <версия-B>` после `uv sync`, совпадение `версия-B` со вписанным в `pyproject.toml` значением и список изменённых файлов, в котором нет кода, проверок и документации)
-- [ ] DEL-16 (document): Исполнитель проходит проверку bump по одному `tests/manual/version-bump-checklist.md`, не обращаясь к спецификации, и на выходе имеет заполненные поля: вывод до правки, diff `pyproject.toml`, вывод после `uv sync`, список изменённых файлов и подпись
-- [ ] проверка группы: tests/manual/version-bump-checklist.md (kind: manual) зелёные на BEH-09
+- [x] реализовать BEH-09: Смена версии в `pyproject.toml` видна в выводе без иных правок (DEL-17 (document): Заполненный чек-лист показывает `smoke <версия-A>` до правки, `smoke <версия-B>` после `uv sync`, совпадение `версия-B` со вписанным в `pyproject.toml` значением и список изменённых файлов, в котором нет кода, проверок и документации)
+- [x] DEL-16 (document): Исполнитель проходит проверку bump по одному `tests/manual/version-bump-checklist.md`, не обращаясь к спецификации, и на выходе имеет заполненные поля: вывод до правки, diff `pyproject.toml`, вывод после `uv sync`, список изменённых файлов и подпись
+- [x] проверка группы: tests/manual/version-bump-checklist.md (kind: manual) зелёные на BEH-09
 
 **Traces to:** [NFR-03], [FR-04]
 
