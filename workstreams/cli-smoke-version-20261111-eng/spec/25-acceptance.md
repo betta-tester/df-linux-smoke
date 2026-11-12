@@ -2,7 +2,7 @@
 schema: acceptance
 schema_version: 1
 spec_stage: acceptance
-status: approval_pending
+status: approved
 owner_role: qa
 subject: 'CLI-утилита: команда smoke --version печатает версию пакета'
 generated_at: '2026-11-12T00:00:00Z'
@@ -14,6 +14,8 @@ upstream_hashes:
   behaviour-spec: 797574c8edcb8087f417fc5e53617f4d3db9c9c4
 approved_content_hash: fdcb59ff64d63706b095bf9cc3788a2e1586fbcd
 version: 2
+approved_at: '2026-11-12T05:50:32Z'
+approved_by: betta-tester
 ---
 
 # Acceptance — CLI-утилита `smoke`: команда `smoke --version`
