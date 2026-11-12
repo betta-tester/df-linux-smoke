@@ -1,0 +1,125 @@
+{
+  "absence": [],
+  "attempt_id": "d892b7a0e3ba4c088ac03062ae232af4",
+  "bases": [
+    {
+      "path": "20-design.md",
+      "role": "design",
+      "sha256": "8f22df288e8b151d5c45088ccae115004f977b25650e49371672b96e8e1601e4",
+      "size": 29226
+    },
+    {
+      "path": "25-acceptance.md",
+      "role": "acceptance",
+      "sha256": "c80996ef9b30f4e0fd9798316497f73f076ab2308905f38a56f3874ca33371c2",
+      "size": 19743
+    }
+  ],
+  "check_identity": "c139e5da324956c0b164f16ede2b8d0448bf6b6444849eeaeff2a2e9bc695c9b",
+  "context": {
+    "estimate_tokens": 19652,
+    "limit_tokens": 120000,
+    "method": "utf8-bytes/4",
+    "reserve_tokens": 8000,
+    "size": 78610,
+    "unit": "utf8-bytes"
+  },
+  "criteria": [
+    {
+      "id": "R1",
+      "reason": "Каждая из трёх задач ссылается на резолюцию design (Q-01/Q-02/Q-03) и/или критерий приёмки (AC-01…AC-08), который реализует.",
+      "status": "pass"
+    },
+    {
+      "id": "R2",
+      "reason": "Все восемь критериев AC-01…AC-08 закрыты через delivers или scenarios задач DT-01…DT-03; блокирующих пробелов нет.",
+      "status": "pass"
+    },
+    {
+      "id": "R3",
+      "reason": "Все обязательства DEL-01…DEL-17 имеют основание в механике и резолюциях design либо в признаках AC; новых требований не вводится.",
+      "status": "pass"
+    },
+    {
+      "id": "R4",
+      "reason": "Рёбра DT-02→DT-01 и DT-03→DT-01 соответствуют порядку design (пакет и entry point в первом red-коммите), граф ацикличен.",
+      "status": "pass"
+    }
+  ],
+  "edge": "decomposition-vs-design-acceptance",
+  "findings": [
+    {
+      "class": "minor",
+      "location": {
+        "lines": [
+          73,
+          77
+        ],
+        "path": "30-decomposition.md"
+      },
+      "rule_id": "R2",
+      "statement": "DEL-06 закрывает AC-06 только через принадлежность сценария BEH-06 задаче DT-01: в sources указаны requirements#FR-03, design#Q-01 и behaviour-spec#BEH-06, но нет acceptance#AC-06, тогда как соседние DEL-01…DEL-05 и DEL-07 ссылаются на закрываемый критерий прямо — трассировка к приёмке асимметрична, хотя покрытие не нарушено."
+    },
+    {
+      "class": "minor",
+      "location": {
+        "lines": [
+          156,
+          159
+        ],
+        "path": "30-decomposition.md"
+      },
+      "rule_id": "R3",
+      "statement": "DEL-16 требует, чтобы исполнитель проходил проверку bump «не обращаясь к спецификации», то есть вводит требование самодостаточности чек-листа; design оставляет верстку и формулировки чеклиста реализатору, а AC-08 фиксирует только четыре наблюдаемых факта и подпись — отдельного основания у этого свойства нет, сам документ признаёт его неутверждённым сценариями."
+    }
+  ],
+  "finished_at": "2026-11-12T06:01:55.843650+00:00",
+  "node": "decomposition",
+  "result_key": "5f187914ef540970cea5419962e97486a1f30009fda54fe19ac641a7e9090480",
+  "reviewer": {
+    "effort": null,
+    "env_passthrough": [
+      "HOME",
+      "LANG",
+      "PATH",
+      "USER"
+    ],
+    "harness": "claude",
+    "harness_version": "2.1.322 (Claude Code)",
+    "model": "claude-opus-5",
+    "model_id": null
+  },
+  "rules": {
+    "id": "decomposition-vs-design-acceptance",
+    "items": [
+      [
+        "R1",
+        "Каждый DT ссылается на решение дизайна или критерий приёмки, который он реализует."
+      ],
+      [
+        "R2",
+        "Каждый критерий приёмки закрыт хотя бы одним DT (сценарии или delivers)."
+      ],
+      [
+        "R3",
+        "DT не вводит обязательств, отсутствующих в дизайне и приёмке."
+      ],
+      [
+        "R4",
+        "Зависимости DT совместимы с порядком, который задаёт дизайн."
+      ]
+    ]
+  },
+  "schema_version": 1,
+  "started_at": "2026-11-12T05:59:36.857012+00:00",
+  "subject": [
+    {
+      "path": "30-decomposition.md",
+      "role": "subject",
+      "sha256": "0591ac9da9192078106e9a922374535be7fd95967e1224396275656674e89558",
+      "size": 25055
+    }
+  ],
+  "verdict": "PASS",
+  "wave": 5
+}
