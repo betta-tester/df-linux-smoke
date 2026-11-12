@@ -183,7 +183,7 @@ Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-0
 **Traces to:** [FR-04], [FR-01]
 
 ### TASK-003: Ручная проверка видимости bump версии
-P2 | TODO   Est: 0.5d
+P2 | 🔄 IN_PROGRESS   Est: 0.5d
 
 Реализовать сценарии BEH-09 (DT-03, группа edges).
 Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-03
