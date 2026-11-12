@@ -3,7 +3,7 @@ schema: decomposition
 schema_version: 1
 spec_stage: decomposition
 dt_contract_version: 2
-status: approval_pending
+status: approved
 owner_role: tech-lead
 subject: 'CLI-утилита: команда smoke --version печатает версию пакета'
 generated_at: '2026-11-12T00:00:00Z'
@@ -15,6 +15,8 @@ upstream_hashes:
   acceptance: "ffb28eed14cdee604579b4cf7d7236952ed8eee1"
 version: 2
 approved_content_hash: 16aa68cf2203b0cd972d26c611fda2476685bdaf
+approved_at: '2026-11-12T06:04:01Z'
+approved_by: betta-tester
 ---
 
 # Decomposition — CLI-утилита `smoke`: команда `smoke --version`
