@@ -3,7 +3,12 @@
 import argparse
 import sys
 from collections.abc import Sequence
-from importlib.metadata import version
+from importlib.metadata import PackageNotFoundError, version
+
+NOT_INSTALLED_MESSAGE = (
+    "smoke: distribution 'smoke' is not installed in this environment; "
+    "create it with `uv sync`\n"
+)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -20,5 +25,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     if not args.version:
         parser.print_usage(sys.stderr)
         return 2
-    sys.stdout.write(f"smoke {version('smoke')}\n")
+    try:
+        installed = version("smoke")
+    except PackageNotFoundError:
+        sys.stderr.write(NOT_INSTALLED_MESSAGE)
+        return 1
+    sys.stdout.write(f"smoke {installed}\n")
     return 0
