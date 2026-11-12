@@ -1,50 +1,99 @@
 {
   "absence": [],
-  "attempt_id": "c599ed04fc2b4cc49c2c063d7a4594ff",
+  "attempt_id": "050f87079d974cf2a47402b64594e8c8",
   "bases": [
     {
       "path": "10-requirements.md",
       "role": "requirements",
-      "sha256": "45b2dc50c730a171672faaa02bcbfb9756fdf5aef4c38d57f4d873d47e281b84",
-      "size": 15767
+      "sha256": "72669fb8d98b8b6bf136fd7c43e2a230dea1baae470e4de79ea992e534b550c9",
+      "size": 15765
     }
   ],
-  "check_identity": "d4da48b881977e42e9a5922fc7c47deb67241dc78972bd1aad22283f59e646ba",
+  "check_identity": "47de195fe6a941e496d15ad72cb42b9fde2306daf8a2dcd517ff5db7ecb0604b",
   "context": {
-    "estimate_tokens": 9844,
+    "estimate_tokens": 10151,
     "limit_tokens": 120000,
     "method": "utf8-bytes/4",
     "reserve_tokens": 8000,
-    "size": 39378,
+    "size": 40605,
     "unit": "utf8-bytes"
   },
   "criteria": [
     {
       "id": "R1",
-      "reason": "Все Must/Should-требования (FR-01…FR-04, NFR-01…NFR-03) имеют содержательные сценарии BEH-01…BEH-09, а отложенные части acceptance оформлены со ссылкой на названные вопросы Q-01/Q-02.",
+      "reason": "все Must/Should-требования FR-01…FR-04 и NFR-01…NFR-03 покрыты сценариями по существу, непокрытых нет",
       "status": "pass"
     },
     {
       "id": "R2",
-      "reason": "Уточнения behaviour-spec (байтовая стабильность, управляющие символы, временный HOME, отсутствие сети) выводятся из NFR-01/NFR-02/CON-02 и не противоречат требованиям и не вводят обязательств сверх них.",
+      "reason": "сценарии не противоречат требованиям и не вводят обязательств сверх них, отложенные утверждения опираются на Q-01/Q-02 самих требований",
       "status": "pass"
     },
     {
       "id": "R3",
-      "reason": "Все сценарии утверждают только stdout/stderr/код возврата/время/состояние ФС, а упоминания pyproject.toml и importlib.metadata выступают стимулом или внешним оракулом, что явно оговорено.",
+      "reason": "сценарии судят наблюдаемый контракт команды, а упоминания importlib.metadata, [project.scripts] и argparse — ссылки на решения утверждённых требований и хартии",
       "status": "pass"
     },
     {
       "id": "R4",
-      "reason": "Формулировки «Тогда» однозначны, а незафиксированные аспекты (код возврата BEH-06, текст stderr BEH-07, механизм изоляции сети BEH-08) заданы как явные неутверждения с привязкой к открытым вопросам.",
+      "reason": "каждый сценарий допускает единственное прочтение, кроме нестрогого «вторая часть строки» в BEH-02",
       "status": "pass"
     }
   ],
   "edge": "behaviour-vs-requirements",
-  "findings": [],
-  "finished_at": "2026-11-11T11:37:21.137533+00:00",
+  "findings": [
+    {
+      "class": "minor",
+      "location": {
+        "lines": [
+          181,
+          183
+        ],
+        "path": "15-behaviour-spec.md"
+      },
+      "rule_id": "R1",
+      "statement": "BEH-08 сужает требование NFR-01 «0 записей на диск» до неизменности рабочего и домашнего каталогов, оставляя записи вне этих путей непроверяемыми."
+    },
+    {
+      "class": "minor",
+      "location": {
+        "lines": [
+          5,
+          13
+        ],
+        "path": "15-behaviour-spec.md"
+      },
+      "rule_id": "R1",
+      "statement": "Документ помечен status: stale, а upstream_hashes.requirements (4031d9c…) не совпадает с approved_content_hash утверждённых требований v3 (0b37067…), то есть покрытие заявлено против иной ревизии основания."
+    },
+    {
+      "class": "minor",
+      "location": {
+        "lines": [
+          157,
+          159
+        ],
+        "path": "15-behaviour-spec.md"
+      },
+      "rule_id": "R3",
+      "statement": "BEH-07 формулирует «Когда» через выполнение кода команды, а не через внешний вызов установленной команды, как в остальных сценариях."
+    },
+    {
+      "class": "minor",
+      "location": {
+        "lines": [
+          76,
+          78
+        ],
+        "path": "15-behaviour-spec.md"
+      },
+      "rule_id": "R4",
+      "statement": "BEH-02 говорит о «второй части выведенной строки», не фиксируя разделитель и правило разбора, из-за чего сравнение с метаданными допускает разные реализации."
+    }
+  ],
+  "finished_at": "2026-11-12T05:32:01.261603+00:00",
   "node": "behaviour-spec",
-  "result_key": "d85746feaf00613c9ba4b1b42e86e5a41bdca69ec92328721c7526414ef851b6",
+  "result_key": "d1a1b48f443fc0f34f7074c5dac42a7e7255f57a33f85ed81d21ed7dd713b5ff",
   "reviewer": {
     "effort": null,
     "env_passthrough": [
@@ -80,13 +129,13 @@
     ]
   },
   "schema_version": 1,
-  "started_at": "2026-11-11T11:35:47.134233+00:00",
+  "started_at": "2026-11-12T05:30:18.951526+00:00",
   "subject": [
     {
       "path": "15-behaviour-spec.md",
       "role": "subject",
-      "sha256": "2257bd2c5d7df7b256d886dc1a53038552c167b7784810d3f6781e0586c36960",
-      "size": 20079
+      "sha256": "8dee4c81deefe32dd59374bece4521d4d892917ddda0726e40d773585e6b87bb",
+      "size": 20205
     }
   ],
   "verdict": "PASS",
