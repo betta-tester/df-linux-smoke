@@ -167,7 +167,7 @@ Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-0
 **Traces to:** [FR-01], [FR-02], [FR-04], [NFR-03], [NFR-02], [FR-03], [NFR-01]
 
 ### TASK-002: Отказ в окружении без установленного дистрибутива
-P2 | 🔄 IN_PROGRESS   Est: 0.5d
+P2 | ✅ DONE   Est: 0.5d
 
 Реализовать сценарии BEH-07 (DT-02, группа edges).
 Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-02
@@ -175,10 +175,10 @@ Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-0
 **Depends on:** [TASK-001]
 
 **Checklist:**
-- [ ] реализовать BEH-07: Без установленного дистрибутива версия не печатается и код ненулевой (DEL-13 (capability): В окружении без установленного дистрибутива `smoke` ветка `--version` не печатает на stdout никакого значения версии — ни литерала из кода, ни значения из рабочей копии — и процесс выходит с ненулевым кодом возврата 1)
-- [ ] DEL-14 (capability): На stderr в этом окружении появляется одна читаемая строка о том, что дистрибутив `smoke` не установлен и что окружение создаётся через `uv sync`, и в stderr нет признака traceback
-- [ ] DEL-15 (module): Проверка наблюдает отказ в интерпретаторе, поднятом через `uv run --no-project --isolated python` с `src/` в `PYTHONPATH` и cwd во временном каталоге, без подмены `importlib.metadata`, и команда запуска видна в эвиденции прогона
-- [ ] проверка группы: tests/test_cli_missing_distribution.py::test_missing_distribution_prints_no_version (kind: integration) зелёные на BEH-07
+- [x] реализовать BEH-07: Без установленного дистрибутива версия не печатается и код ненулевой (DEL-13 (capability): В окружении без установленного дистрибутива `smoke` ветка `--version` не печатает на stdout никакого значения версии — ни литерала из кода, ни значения из рабочей копии — и процесс выходит с ненулевым кодом возврата 1)
+- [x] DEL-14 (capability): На stderr в этом окружении появляется одна читаемая строка о том, что дистрибутив `smoke` не установлен и что окружение создаётся через `uv sync`, и в stderr нет признака traceback
+- [x] DEL-15 (module): Проверка наблюдает отказ в интерпретаторе, поднятом через `uv run --no-project --isolated python` с `src/` в `PYTHONPATH` и cwd во временном каталоге, без подмены `importlib.metadata`, и команда запуска видна в эвиденции прогона
+- [x] проверка группы: tests/test_cli_missing_distribution.py::test_missing_distribution_prints_no_version (kind: integration) зелёные на BEH-07
 
 **Traces to:** [FR-04], [FR-01]
 
