@@ -167,7 +167,7 @@ Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-0
 **Traces to:** [FR-01], [FR-02], [FR-04], [NFR-03], [NFR-02], [FR-03], [NFR-01]
 
 ### TASK-002: Отказ в окружении без установленного дистрибутива
-P2 | TODO   Est: 0.5d
+P2 | 🔄 IN_PROGRESS   Est: 0.5d
 
 Реализовать сценарии BEH-07 (DT-02, группа edges).
 Source: workstreams/cli-smoke-version-20261111-eng/spec/30-decomposition.md#DT-02
